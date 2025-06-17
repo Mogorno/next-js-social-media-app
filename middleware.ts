@@ -1,11 +1,12 @@
 import authConfig from './auth.config';
 import NextAuth from 'next-auth';
 import {
-    apiAuthPrefix,
     authRoutes,
     DEFAULT_LOGIN_REDIRECT,
     LOGIN,
     publicRoutes,
+    publicApiRoutes,
+    protectedApiRoutes,
 } from './routes';
 
 // Use only one of the two middleware options below
@@ -18,11 +19,14 @@ const { auth } = NextAuth(authConfig);
 export default auth(async function middleware(req) {
     const { nextUrl } = req;
 
-    const isAuthenticated = !!req.auth;
-    const isApiAuthRoute = nextUrl.pathname.startsWith(apiAuthPrefix);
+    const isAuthenticated = !!req.auth?.user;
+    const isPublicApiRoute = publicApiRoutes.includes(nextUrl.pathname);
+    const isProtectedApiRoute = protectedApiRoutes.includes(nextUrl.pathname);
     const isPublicRoute = publicRoutes.includes(nextUrl.pathname);
     const isAuthRoute = authRoutes.includes(nextUrl.pathname);
-    if (isApiAuthRoute) return;
+
+    if (isPublicApiRoute) return;
+    if (isProtectedApiRoute && isAuthenticated) return;
 
     if (isAuthRoute) {
         if (isAuthenticated) {

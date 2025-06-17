@@ -115,6 +115,9 @@ const ImageUploadForm = () => {
     const modalRef = useModalClose<HTMLDivElement>({
         isOpen,
         callback: () => (setIsOpen(false), handleReset()),
+        options: {
+            triggers: { mouseLeave: false },
+        },
     });
 
     return (
@@ -179,7 +182,10 @@ const ImageUploadForm = () => {
                         onBeforeUploadBegin={handlePending}
                         onUploadProgress={handleProgress}
                         onClientUploadComplete={handleOnComplete}
-                        onUploadError={handleError}
+                        onUploadError={(error) => {
+                            console.log(error);
+                            handleError();
+                        }}
                     />
                     <motion.span
                         key={`upload-form-progress`}

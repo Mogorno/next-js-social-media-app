@@ -5,6 +5,7 @@ import Providers from './Providers';
 import { themes } from '@/helpers/Theme';
 import Navbar from '@/components/Navbar';
 import MobileMenu from '@/components/MobileMenu';
+// import NavPanel from '@/components/NavPanel';
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -35,8 +36,9 @@ export default function RootLayout({
             </head>
             <Providers>
                 <body
-                    className={`${geistSans.variable} ${geistMono.variable} pt-12 antialiased h-screen w-screen bg-mainBG text-mainText`}
+                    className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen w-screen bg-mainBG text-mainText`}
                 >
+                    {/* <NavPanel className="w-1/10 h-full fixed" /> */}
                     <Navbar />
                     <MobileMenu />
                     {children}

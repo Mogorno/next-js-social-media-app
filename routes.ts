@@ -121,6 +121,14 @@ export const AUTH_NEW_PASSWORD = new AppLink(
     'auth'
 );
 
+export const API_UPLOADTHING = new AppLink(
+    '/api/uploadthing',
+    'Uploadthing',
+    IoHomeSharp,
+    IoHomeOutline,
+    'protected'
+);
+
 const appLinks = [
     HOME,
     FRIENDS,
@@ -135,7 +143,9 @@ const appLinks = [
     AUTH_NEW_VERIFICATION,
     AUTH_RESET,
     AUTH_NEW_PASSWORD,
+    API_UPLOADTHING,
 ];
+
 export default appLinks;
 
 export const publicRoutes = appLinks.reduce<string[]>((acc, link) => {
@@ -153,6 +163,10 @@ export const authRoutes = appLinks.reduce<string[]>((acc, link) => {
 }, []);
 
 export const apiAuthPrefix = '/api/auth';
+
+export const publicApiRoutes: string[] = [apiAuthPrefix, '/api/uploadthing'];
+
+export const protectedApiRoutes: string[] = [];
 
 export const DEFAULT_LOGIN_REDIRECT = SETTINGS.href;
 

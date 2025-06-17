@@ -54,6 +54,18 @@ Focus on **authentication**, **2FA**, **smooth UI/UX with animations**, and **mo
 
 ---
 
+## Screenshots
+
+### Home Page
+
+![Home Page](public/screenshots/homepage.png)
+
+### 2FA Login
+
+![2FA Login](public/screenshots/2fa-login.png)
+
+---
+
 ## 🧪 Getting Started
 
 ```bash

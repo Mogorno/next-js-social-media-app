@@ -1,7 +1,7 @@
 import { auth } from '@/auth';
-import { PROFILE } from '@/helpers/NAVIGATE_LINKS';
 import { deleteUTFiles } from '@/helpers/UploadThing/deleteUTFiles';
 import { prisma } from '@/prisma';
+import { SETTINGS } from '@/routes';
 import { revalidatePath } from 'next/cache';
 import { createUploadthing, type FileRouter } from 'uploadthing/next';
 import { UploadThingError } from 'uploadthing/server';
@@ -49,7 +49,7 @@ export const ourFileRouter = {
             if (typeof prevImage === 'string') {
                 await deleteUTFiles(prevImage);
             }
-            revalidatePath(PROFILE.href);
+            revalidatePath(SETTINGS.pathname);
 
             return { uploadedBy: metadata.userId };
         }),

@@ -10,7 +10,7 @@ const NavLinks = ({
     childrenClassName,
     ...restProps
 }: NavLinksProps) => {
-    const availableLinks = ['Home', 'Friends', 'Stories'];
+    const availableLinks = ['Home', 'Friends', 'Stories', 'Settings'];
 
     const links = linksList.filter(({ title }) =>
         availableLinks.includes(title)
