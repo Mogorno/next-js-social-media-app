@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    /* px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64' */
+    .layout {
+        @apply px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64;
+    }
+}
+@layer base {
+    .password-custom {
+        -webkit-text-security: disc;
+    }
+
+    .password-custom.custom-star {
+        -webkit-text-security: '*';
+    }
+}
+
+@layer utilities {
+    .shadow-custom-inner {
+        --tw-shadow: inset 0 0 4px 0 rgb(0 0 0 / 0.05);
+        --tw-shadow-colored: inset 0 0 4px 0 var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+            var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+}
+/* 
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -18,4 +43,4 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
