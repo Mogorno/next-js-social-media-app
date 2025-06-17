@@ -63,11 +63,9 @@ This app uses [UploadThing](https://uploadthing.com/) to handle file uploads sec
 
 ## Screenshots
 
-![Preview](public/screenshots/login-page.png)
-
 ### Sign in page
 
-![Login Page](public/screenshots/login-page.png)
+![Preview](public/screenshots/login-page.png)
 
 ### Register page
 
