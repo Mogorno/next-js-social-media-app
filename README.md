@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Social Media App — Authentication + Email 2FA + React 19 Features (WIP 🛠️)
 
-## Getting Started
+A full-stack social media app built with **Next.js 14** and modern React 19 features.  
+Focus on **authentication**, **2FA**, **smooth UI/UX with animations**, and **modern server/client rendering patterns**.
 
-First, run the development server:
+---
+
+## ✅ Implemented
+
+- 🔐 Full authentication flow with **Auth.js**
+- 📧 **2FA via email** using **Resend**
+- 🛢️ MongoDB + Prisma ORM
+- 💅 Responsive UI with **Tailwind CSS**
+- ⚛️ **React 19**:
+    - `use()` for async rendering
+    - `<Suspense>` for data & UI loading
+    - `useOptimistic()` for optimistic updates
+- 🧩 Animations with **Framer Motion**
+- 📦 Modular and scalable folder structure
+
+---
+
+## 🧪 Tech Stack
+
+- **Next.js 14 (App Router, Server Components)**
+- **React 19 (use, useOptimistic, Suspense)**
+- **TypeScript**
+- **Auth.js (NextAuth)** — secure session-based auth
+- **Resend.js** — transactional email for 2FA
+- **MongoDB + Prisma**
+- **Tailwind CSS + Framer Motion**
+
+---
+
+## 🖼️ UI/UX
+
+- Clean design with interactive motion-based transitions
+- Page and component-level animations using Framer Motion
+- Smooth loading states with Suspense
+- Optimistic UI updates for instant feedback
+
+---
+
+## 📌 Features in Progress
+
+- User profiles (avatar, bio, etc.)
+- Public & private posts
+- Follows/followers logic
+- Commenting & reactions
+- Notifications system
+- Real-time chat (WebSocket)
+- Image uploads
+- Mobile layout and responsive improvements
+
+---
+
+## 🧪 Getting Started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/social-media-app.git
+cd social-media-app
+npm install
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
