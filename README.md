@@ -27,6 +27,7 @@ Focus on **authentication**, **2FA**, **smooth UI/UX with animations**, and **mo
 - **TypeScript**
 - **Auth.js (NextAuth)** — secure session-based auth
 - **Resend.js** — transactional email for 2FA
+- **UploadThing** — for file uploads
 - **MongoDB + Prisma**
 - **Tailwind CSS + Framer Motion**
 
@@ -38,6 +39,12 @@ Focus on **authentication**, **2FA**, **smooth UI/UX with animations**, and **mo
 - Page and component-level animations using Framer Motion
 - Smooth loading states with Suspense
 - Optimistic UI updates for instant feedback
+
+---
+
+## File Uploads
+
+This app uses [UploadThing](https://uploadthing.com/) to handle file uploads securely and efficiently. UploadThing manages the upload flow and callbacks to the API.
 
 ---
 
@@ -56,13 +63,43 @@ Focus on **authentication**, **2FA**, **smooth UI/UX with animations**, and **mo
 
 ## Screenshots
 
-### Home Page
+### Sign in page
 
-![Home Page](public/screenshots/homepage.png)
+![Login Page](public/screenshots/login-page.png)
 
-### 2FA Login
+### Register page
 
-![2FA Login](public/screenshots/2fa-login.png)
+![Register Page](public/screenshots/register-page.png)
+
+### Register with verification
+
+![Register Verification](public/screenshots/register-page-show-case-1.png)
+
+### Friends page
+
+![Friends Page](public/screenshots/friends-page-show-case-2.png)
+
+### Friends page. With optimistic updates
+
+![Friends Optimistic Actions 1](public/screenshots/friends-page-show-case-1.png)
+![Friends Optimistic Actions 2](public/screenshots/friends-page-show-case-3.png)
+
+### New verification page
+
+![New Verification](public/screenshots/new-verification-page.png)
+
+### Settings page
+
+![Settings Page](public/screenshots/settings-page.png)
+
+### Settings. Update user image
+
+![Settings Update Image](public/screenshots/settings-page-show-case-1.png)
+![Settings Update Image](public/screenshots/settings-page-show-case-2.png)
+
+### Theme Menu & Toggle component using Framer Motion
+
+![Theme Menu](public/screenshots/theme-menu.png)
 
 ---
 
